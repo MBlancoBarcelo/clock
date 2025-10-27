@@ -5,15 +5,29 @@ body {
   height: 100vh;
 }
 
+nav{
+  height: 10vh;
+  background-color: #819595;
+  
+}
+
 nav > ul {
+  padding-top: 2vh;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  
 }
 
 nav > ul > li {
   flex: 1 1 auto;
   text-align: center;
+}
+
+.quitador{
+  color: black;
+  text-decoration: none !important;
+  
 }
 
 main {
