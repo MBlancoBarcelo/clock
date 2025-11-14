@@ -93,3 +93,16 @@ export default class Stopwatch extends HTMLElement {
     ).toISOString();
   }
 }
+
+const botonesstopwatch = document.querySelectorAll("#stopwatch .controls button")
+
+
+botonesstopwatch.forEach((element) => {
+  element.addEventListener("click",(event) => {
+    botonesstopwatch.forEach((element) => {
+        element.classList.remove("activado")
+    })
+    element.classList.add("activado")
+  })
+}
+)

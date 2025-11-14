@@ -22,4 +22,6 @@ export default class Clock extends HTMLElement {
   disconnectedCallback() {
     clearInterval(this.#intervalId);
   }
+
+
 }
