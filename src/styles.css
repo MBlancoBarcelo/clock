@@ -1,6 +1,8 @@
 :root{
   --fondonavbar:hsl(35, 80%, 55%);
   --fondo:hsl(35, 80%, 60%);
+  --fondooscuro:hsl(220, 50%, 20%);
+  --fondonavbaroscuro:hsl(220, 80%, 40%);
 }
 
 *{
@@ -143,4 +145,22 @@ main {
 
 main > section:not(:target) {
   display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--fondooscuro);
+  }
+  nav{
+    background-color: var(--fondonavbaroscuro);
+  }
+  .timers input{
+    background-color: var(--fondonavbaroscuro);
+  }
+  .controls button{
+    background-color: var(--fondonavbaroscuro);
+  }
+  .alarms input{
+    background-color: var(--fondonavbaroscuro);
+  }
 }

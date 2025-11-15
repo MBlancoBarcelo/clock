@@ -8,8 +8,9 @@ customElements.define("x-clock", Clock);
 customElements.define("x-stopwatch", Stopwatch);
 customElements.define("x-timer", Timer);
 
-const botonesnavbar = document.querySelectorAll(".quitador")
 
+
+const botonesnavbar = document.querySelectorAll(".quitador")
 console.log(botonesnavbar)
 
 botonesnavbar.forEach((element) => {
