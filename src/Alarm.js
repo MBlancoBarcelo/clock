@@ -86,5 +86,24 @@ export default class Alarm extends HTMLElement {
   }
 }
 
+const alarmSound = document.getElementById('alarmsound');
 
+setInterval(() => {
+  const alarms = document.querySelectorAll('#alarm > x-alarm > section.items > section > input[type=time]');
 
+  alarms.forEach((alarm) => {
+    const alarmTime = alarm.value;
+    const currentTime = new Date();
+    const time = currentTime.toTimeString().split(' ')[0];
+
+    if (alarmTime === time) {
+      alarmSound.play();
+      setTimeout(() => {
+        alarmSound.pause();
+        alarmSound.currentTime = 0;
+      }, 6000);
+    }
+  }
+)
+}, 1000
+)
