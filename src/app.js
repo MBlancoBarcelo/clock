@@ -21,7 +21,13 @@ botonesnavbar.forEach((element) => {
             element.classList.remove("activado")
         })
         element.classList.add("activado")
+        localStorage.setItem("selectedtab",element.getAttribute("id"));    
     })
 })
 
-
+window.addEventListener("DOMContentLoaded", () => {
+    let tab = localStorage.getItem("selectedtab");
+    if(tab){
+        document.getElementById(tab).classList.add("activado");
+    }
+})

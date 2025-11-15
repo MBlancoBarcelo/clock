@@ -201,8 +201,3 @@ main > section:not(:target) {
     background-color: hsl(220, 70%, 30%) !important;
   }
 }
-@media (max-width: 600px) {
-  nav .buttons .quitador {
-    color: blue !important;
-  }
-}
