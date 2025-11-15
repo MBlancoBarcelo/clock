@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+
 :root{
   --fondonavbar:hsl(35, 80%, 55%);
   --fondo:hsl(35, 80%, 60%);
   --fondooscuro:hsl(220, 50%, 20%);
-  --fondonavbaroscuro:hsl(220, 80%, 40%);
+  --fondonavbaroscuro:hsl(220, 50%, 40%);
 }
 
 *{
   padding: 0 ;
   margin: 0 ;
 }
+
+.comic-neue-regular {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 body {
   display: flex;
@@ -36,6 +46,7 @@ nav > ul > li {
   display: flex;
   justify-content: center;
   flex: 1 1 auto;
+  flex-wrap: wrap;
   text-align: center;
   align-items: center;
 }
@@ -149,18 +160,36 @@ main > section:not(:target) {
 
 @media (prefers-color-scheme: dark) {
   body {
+    color: hsl(218, 13%, 83%);
     background-color: var(--fondooscuro);
   }
+
+  .buttons a{
+    color: hsl(218, 13%, 83%);
+  }
+
   nav{
     background-color: var(--fondonavbaroscuro);
   }
   .timers input{
+    color: hsl(218, 13%, 83%) !important;
     background-color: var(--fondonavbaroscuro);
   }
   .controls button{
+    color: hsl(218, 13%, 83%) !important;
     background-color: var(--fondonavbaroscuro);
   }
   .alarms input{
+    color: hsl(218, 13%, 83%) !important;
     background-color: var(--fondonavbaroscuro);
+  }
+
+  .activado{
+    background-color: hsl(220, 70%, 30%) !important;
+  }
+}
+@media (max-width: 600px) {
+  nav .buttons .quitador {
+    color: blue !important;
   }
 }

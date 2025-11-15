@@ -14,23 +14,23 @@
   <body>
     <nav>
       <ul>
-        <li class="buttons" id="clockli"><a class="quitador" href="#clock" id="clocka"> <i class="iconos schedule material-icons">schedule</i>Cloack</a></li>
-        <li class="buttons" id="alarmli"><a class="quitador" href="#alarm" id="alarma"><i class="iconos schedule material-icons">alarm</i>Alarm</a></li>
-        <li class="buttons" id="stopwatchli"><a class="quitador" href="#stopwatch" id="stopwatcha"><i class="iconos schedule material-icons">timer</i>Stopwatch</a></li>
-        <li class="buttons" id="timerli"><a class="quitador" href="#timer" id="timera"><i class="iconos schedule material-icons">watch</i>Timer</a></li>
+        <li class="buttons" id="clockli"><a class="quitador comic-neue-regular" href="#clock" id="clocka"> <i class="iconos schedule material-icons">schedule</i>Cloack</a></li>
+        <li class="buttons" id="alarmli"><a class="quitador comic-neue-regular" href="#alarm" id="alarma"><i class="iconos schedule material-icons">alarm</i>Alarm</a></li>
+        <li class="buttons" id="stopwatchli"><a class="quitador comic-neue-regular" href="#stopwatch" id="stopwatcha"><i class="iconos schedule material-icons">timer</i>Stopwatch</a></li>
+        <li class="buttons" id="timerli"><a class="quitador comic-neue-regular" href="#timer" id="timera"><i class="iconos schedule material-icons">watch</i>Timer</a></li>
       </ul>
     </nav>
     <main>
       <section id="clock">
         <x-clock>
-          <time>00:00:00</time>
+          <time class="comic-neue-regular">00:00:00</time>
         </x-clock>
       </section>
       <section id="alarm">
         <x-alarm>
           <template>
             <section class="alarms">
-              <input type="time" min="00:00" max="23:59" step="1" />
+              <input  type="time" min="00:00" max="23:59" step="1" />
               <section class="controls">
                 <button class="start material-icons">alarm_on</button>
                 <button class="pause material-icons">alarm_off</button>
@@ -46,7 +46,7 @@
       </section>
       <section id="stopwatch">
         <x-stopwatch>
-          <time datetime="PT0S">00:00:00.00</time>
+          <time datetime="PT0S" class="comic-neue-regular">00:00:00.00</time>
           <section class="controls">
             <button class="start material-icons">timer</button>
             <button class="pause material-icons">timer_off</button>
@@ -56,7 +56,7 @@
       </section>
       <section id="timer">
         <x-timer>
-          <time datetime="PT0S">00:00:00.00</time>
+          <time datetime="PT0S" class="comic-neue-regular">00:00:00.00</time>
           <section class="items">
             <section class="timers">
               <input
