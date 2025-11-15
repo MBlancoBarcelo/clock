@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
 
 
 :root{
@@ -14,8 +14,7 @@
 }
 
 .comic-neue-regular {
-  font-family: "Comic Neue", cursive;
-  font-weight: 400;
+  font-family: "Noto Serif JP";
   font-style: normal;
 }
 
