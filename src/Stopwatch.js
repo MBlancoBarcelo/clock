@@ -80,6 +80,7 @@ export default class Stopwatch extends HTMLElement {
     time.textContent = "00:00:00.00";
     this.paused = false;
     this.startTime = "";
+    
   }
 
   start() {
