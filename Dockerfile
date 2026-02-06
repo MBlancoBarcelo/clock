@@ -3,5 +3,14 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-CMD npm run dev
+RUN npm run build
+
+FROM node:25.2.0-slim
+WORKDIR /app
+COPY --from=base /app/package*.json ./
+COPY --from=base /app/node_modules ./node_modules
+COPY --from=base /app/dist ./dist
+EXPOSE 3521
+CMD ["npm","run","dev"]
+
 
