@@ -5,12 +5,9 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM node:25.2.0-slim
-WORKDIR /app
-COPY --from=base /app/package*.json ./
-COPY --from=base /app/node_modules ./node_modules
-COPY --from=base /app/dist ./dist
-EXPOSE 3521
-CMD ["npm","run","dev"]
+FROM httpd:2.4-alpine
+COPY --from=base /app/dist/ /usr/local/apache2/htdocs/
+EXPOSE 80
+CMD ["httpd-foreground"]
 
 

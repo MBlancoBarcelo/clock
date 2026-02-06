@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "vite build",
-    "dev": "vite",
+    "dev": "vite --host",
     "lint": "eslint .",
     "format": "prettier . --check",
     "preview": "vite preview"
