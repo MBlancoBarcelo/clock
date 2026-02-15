@@ -1,0 +1,11 @@
+
+services:
+  web:
+    build: .
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.newman
+    depends_on:
+      - web

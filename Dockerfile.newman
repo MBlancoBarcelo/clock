@@ -1,0 +1,4 @@
+FROM postman/newman
+WORKDIR /etc/newman
+COPY actividadTest.postman_collection.json .
+CMD ["run" , "actividadTest.postman_collection.json"]
